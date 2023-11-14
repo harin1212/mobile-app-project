@@ -1,9 +1,9 @@
-import Header from "../../components/Header/index.js";
+import Bar from "../../components/Bar/Bar.js";
 
 function Main() {
   return (
     <>
-      <Header />
+      <Bar/>
     </>
   );
 }
