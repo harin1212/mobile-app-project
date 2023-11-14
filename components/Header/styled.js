@@ -10,6 +10,7 @@ const HeaderStyles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     padding: 15,
+    marginTop: 20,
   },
   title: {
     fontSize: 20,
