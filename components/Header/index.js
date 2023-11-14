@@ -30,11 +30,19 @@ const Header = () => {
 
   return (
     <View style={HeaderStyles.container}>
-      <Text style={HeaderStyles.title}>H&H BETA</Text>
+      <Text style={HeaderStyles.title}> H&H 베타</Text>
       <Text style={HeaderStyles.index}>
-        {isKosdaqVisible
-          ? `KOSDAQ: ${indices.kosdaq}`
-          : `KOSPI: ${indices.kospi}`}
+        {isKosdaqVisible ? (
+          <>
+            <Text style={HeaderStyles.word}>코스닥: </Text>
+            <Text style={HeaderStyles.number}>{indices.kosdaq.toFixed(2)}</Text>
+          </>
+        ) : (
+          <>
+            <Text style={HeaderStyles.word}>코스피: </Text>
+            <Text style={HeaderStyles.number}>{indices.kospi.toFixed(2)}</Text>
+          </>
+        )}
       </Text>
     </View>
   );
