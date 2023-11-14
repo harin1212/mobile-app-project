@@ -6,8 +6,7 @@ import RealTimeChart from "./components/RealTimeChart/RealTimeChart.js";
 export default function App() {
   return (
     <View style={styles.container}>
-      <RealTimeChart />
-      <Bar />
+      <Main />
     </View>
   );
 }

@@ -11,6 +11,7 @@ const RealTimeChart = () => {
   
   const styles = StyleSheet.create({
     container: {
+      height: "30%",
     },
     TopText: {
       fontSize: 20,
