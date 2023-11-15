@@ -5,12 +5,14 @@ import Bar from "../../components/Bar/Bar.js";
 import RealTimeChart from "../../components/RealTimeChart/RealTimeChart.js";
 import TopMenu from "../../components/TopMenu/TopMenu.js";
 import StockIndex from "../../components/StockIndex/StockIndex.js";
+import Interested from "../../components/Interested/interested.js";
 function Main() {
   return (
     <View style={styles.container}>
       <Header />
       <TopMenu />
       <StockIndex />
+      <Interested />
       <RealTimeChart />
       <Bar />
     </View>
