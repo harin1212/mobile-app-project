@@ -64,7 +64,7 @@ const ContentSwitcher = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    width: "90%",
+    width: "95%",
     height: 250,
     justifyContent: "center",
   },

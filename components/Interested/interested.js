@@ -50,7 +50,6 @@ const Interested = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    width: "90%",
   },
   title: {
     fontSize: 18,
