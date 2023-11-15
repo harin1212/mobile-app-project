@@ -65,7 +65,7 @@ const RealTimeChart = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
   },
   topText: {
     fontSize: 20,
