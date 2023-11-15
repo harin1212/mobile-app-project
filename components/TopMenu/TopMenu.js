@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     width: "100%",
+    height: "10%",
     paddingVertical: 10,
   },
   item: {

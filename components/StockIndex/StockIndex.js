@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     width: "90%",
-    height: "40%",
+    height: 250,
     justifyContent: "center",
   },
   buttonContainer: {
