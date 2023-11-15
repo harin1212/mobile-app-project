@@ -1,15 +1,18 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import Header from "../../components/Header/index.js";
+import Header from "../../components/Header/Header.js";
 import Bar from "../../components/Bar/Bar.js";
 import RealTimeChart from "../../components/RealTimeChart/RealTimeChart.js";
-
+import TopMenu from "../../components/TopMenu/TopMenu.js";
+import StockIndex from "../../components/StockIndex/StockIndex.js";
 function Main() {
   return (
     <View style={styles.container}>
       <Header />
+      <TopMenu />
+      <StockIndex />
       <RealTimeChart />
-      <Bar/>
+      <Bar />
     </View>
   );
 }
