@@ -8,7 +8,7 @@ import heart from "../../assets/image/heart.png";
 const RealTimeChart = () => {
   const [selectedCategory, setSelectedCategory] = useState("거래량");
   const stockData = [
-    { rank: 1, name: "삼성전자", price: "38,050원", change: "   +0.1%", img: stock1 },
+    { rank: 1, name: "신성델타테크", price: "38,050원", change: "    +0.1%", img: stock1 },
     { rank: 2, name: "애플", price: "244,353원", change: "+0.3%", img: stock2 },
     { rank: 3, name: "테슬라", price: "283,222원", change: "-0.4%", img: stock3 },
   ];
@@ -17,7 +17,6 @@ const RealTimeChart = () => {
     setSelectedCategory(category);
   };
 
-  // 실시간 차트 탭
   const renderCategory = (category) => (
     <TouchableOpacity key={category} onPress={() => handleCategoryPress(category)}>
       <Text style={[styles.chartText, selectedCategory === category && styles.chartSelectedText]}>
@@ -26,7 +25,6 @@ const RealTimeChart = () => {
     </TouchableOpacity>
   );
 
-  // 주식 목록
   const renderStockItems = () => {
     return stockData.map((item) => (
       <View key={item.rank} style={styles.stockItem}>
@@ -53,9 +51,7 @@ const RealTimeChart = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.topText}>실시간 차트</Text>
-      <View style={styles.chartBar}>
-        {["거래량", "인기", "급상승", "급하락"].map(renderCategory)}
-      </View>
+      <View style={styles.chartBar}>{["거래량", "인기", "급상승", "급하락"].map(renderCategory)}</View>
       {renderStockItems()}
     </SafeAreaView>
   );
@@ -63,15 +59,14 @@ const RealTimeChart = () => {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10
+    margin: 10,
   },
   topText: {
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 10,
-    marginLeft: 5
+    marginLeft: 5,
   },
-  // 실시간 차트 탭
   chartBar: {
     display: "flex",
     justifyContent: "space-between",
@@ -83,10 +78,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   chartSelectedText: {
-    fontWeight: "bold", 
-    color: "black", 
+    fontWeight: "bold",
+    color: "black",
   },
-  // 주식 목록
   stockItem: {
     flexDirection: "row",
     alignItems: "center",
