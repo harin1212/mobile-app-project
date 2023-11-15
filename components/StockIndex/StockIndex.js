@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     height: "80%",
-    backgroundColor: "white",
     borderRadius: 10,
     flexDirection: "row",
     justifyContent: "center", // 자식 요소를 양쪽 끝으로 정렬
