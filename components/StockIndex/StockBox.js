@@ -11,11 +11,12 @@ const StockBox = ({ title, indexValue }) => {
     <View
       style={{
         backgroundColor: "#E1E0FF",
-        padding: 10,
+        padding: 8,
         borderRadius: 10,
-        marginVertical: 10,
         width: "45%",
         margin: "3%",
+        borderColor: "white",
+        borderWidth: 2,
         flexDirection: "column", // 세로 정렬
       }}
     >
