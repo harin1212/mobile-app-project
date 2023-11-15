@@ -64,7 +64,7 @@ const ContentSwitcher = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    width: "90%",
+    width: "95%",
     height: 250,
     justifyContent: "center",
   },
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     height: "80%",
-    backgroundColor: "white",
     borderRadius: 10,
     flexDirection: "row",
     justifyContent: "center", // 자식 요소를 양쪽 끝으로 정렬

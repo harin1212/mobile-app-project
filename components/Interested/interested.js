@@ -9,8 +9,10 @@ const StockItem = ({ imageSource, name, price, change }) => (
     <Image source={imageSource} style={styles.stockImage} />
     <View style={styles.stockInfo}>
       <Text style={styles.stockName}>{name}</Text>
-      <Text style={styles.stockPrice}>{price}</Text>
-      <Text style={styles.stockChange}>{change}</Text>
+      <View style={styles.priceChangeContainer}>
+        <Text style={styles.stockPrice}>{price}</Text>
+        <Text style={styles.stockChange}>{change}</Text>
+      </View>
     </View>
   </View>
 );
@@ -48,7 +50,6 @@ const Interested = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    width: "90%",
   },
   title: {
     fontSize: 18,
@@ -71,6 +72,7 @@ const styles = StyleSheet.create({
   stockImage: {
     width: 50,
     height: 50,
+    borderRadius: 25, // 반지름이 이미지의 절반 크기
     marginRight: 10,
   },
   stockInfo: {
@@ -79,6 +81,10 @@ const styles = StyleSheet.create({
   stockName: {
     fontSize: 16,
     fontWeight: "bold",
+  },
+  priceChangeContainer: {
+    flexDirection: "column",
+    alignItems: "flex-end",
   },
   stockPrice: {
     fontSize: 14,
