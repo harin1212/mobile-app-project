@@ -6,17 +6,20 @@ import RealTimeChart from "../../components/RealTimeChart/RealTimeChart.js";
 import TopMenu from "../../components/TopMenu/TopMenu.js";
 import StockIndex from "../../components/StockIndex/StockIndex.js";
 import News from "../../components/News/News.js";
+import Interested from "../../components/Interested/interested.js";
 function Main() {
   return (
     <View style={styles.container}>
       <Header />
         <TopMenu />
-      <ScrollView contentContainerStyle={styles.scrollViewContainer}>
+      <ScrollView contentContainerStyle={styles.scrollViewContainer} showsVerticalScrollIndicator={false}>
         <StockIndex />
+        <Interested />
         <RealTimeChart />
         <News />
       </ScrollView>
-      <Bar />
+        <Bar />
+      
     </View>
   );
 }
@@ -30,6 +33,9 @@ const styles = StyleSheet.create({
   },
   scrollViewContainer: {
     justifyContent: 'center',
+    flexGrow: 1,
+    paddingBottom: 20, 
+    width: "100%"
   },
 });
 

@@ -76,9 +76,8 @@ const styles = StyleSheet.create({
   // 실시간 차트 탭
   chartBar: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     flexDirection: "row",
-    margin: 10
   },
   chartText: {
     fontSize: 15,
@@ -109,7 +108,6 @@ const styles = StyleSheet.create({
   heartImg: {
     width: 20,
     height: 20,
-    marginHorizontal: 10,
   },
   textContainer: {
     flex: 1,
@@ -123,12 +121,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   stockPrice: {
-    fontSize: 14,
+    fontSize: 12,
     marginRight: 5,
     marginTop: 5,
   },
   stockChange: {
-    fontSize: 12,
+    fontSize: 10,
     marginLeft: 70,
   },
 });
