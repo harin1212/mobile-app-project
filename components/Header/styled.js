@@ -4,13 +4,13 @@ import { StyleSheet } from "react-native";
 
 const HeaderStyles = StyleSheet.create({
   container: {
-    height: "10%",
+    height: "11%",
     width: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 15,
-    marginTop: 20,
+    padding: 20,
+    paddingTop: 50,
   },
   title: {
     fontSize: 20,
@@ -19,7 +19,8 @@ const HeaderStyles = StyleSheet.create({
     color: "black", // 헤더 타이틀 색상
   },
   index: {
-    fontSize: 16,
+    fontSize: 15,
+    marginTop: 5,
     width: "70%",
     color: "purple", // 코스닥, 코스피 글자색
   },
@@ -27,7 +28,7 @@ const HeaderStyles = StyleSheet.create({
     color: "black", // '코스닥', '코스피' 글자색
   },
   number: {
-    color: "purple", // 숫자 글자색
+    color: "#AFC048", // 숫자 글자색
   },
 });
 

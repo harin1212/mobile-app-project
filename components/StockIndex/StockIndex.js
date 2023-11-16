@@ -3,9 +3,16 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import StockBox from "./StockBox";
+import korea from "../../assets/image/korea.png"
+import us from "../../assets/image/us.png"
+import china from "../../assets/image/china.png"
 
 const ContentSwitcher = () => {
   const [selectedButton, setSelectedButton] = useState("국내");
+  const dataPoints1 = [10, 30, 15, 25, 40, 20, 35];
+  const dataPoints2 = [15, 20, 30, 40, 35, 25, 30];
+  const dataPoints3 = [25, 40, 20, 30, 45, 15, 30];
+  const dataPoints4 = [30, 45, 25, 40, 50, 40, 40];
 
   const handleButtonPress = (button) => {
     setSelectedButton(button);
@@ -50,11 +57,14 @@ const ContentSwitcher = () => {
       <View style={styles.contentContainer}>
         {selectedButton === "국내" ? (
           <View style={styles.stockBoxContainer}>
-            <StockBox title="코스피" indexValue="2,405.91" />
-            <StockBox title="코스닥" indexValue="777.47" />
+            <StockBox title="코스피" indexValue="2,405.91" imgSrc={korea} chart={dataPoints1}/>
+            <StockBox title="코스닥" indexValue="777.47" imgSrc={korea} chart={dataPoints2}/>
           </View>
         ) : (
-          <Text>해외 컨텐츠를 여기에 표시합니다.</Text>
+          <View style={styles.stockBoxContainer}>
+          <StockBox title="나스닥" indexValue="15,713.33" imgSrc={us} chart={dataPoints3}/>
+          <StockBox title="상해종합" indexValue="3,560.14" imgSrc={china} chart={dataPoints4}/>
+        </View>
         )}
       </View>
     </View>
@@ -64,20 +74,19 @@ const ContentSwitcher = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    width: "90%",
-    height: "40%",
+    width: "98%",
+    height: 250,
     justifyContent: "center",
   },
   buttonContainer: {
     flexDirection: "row",
-    marginBottom: 20,
   },
   button: {
     padding: 10,
     borderRadius: 5,
   },
   selectedButton: {
-    backgroundColor: "#9370DB",
+    backgroundColor: "rgba(5, 3, 0, 0.54)",
   },
   buttonText: {
     color: "black",

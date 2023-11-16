@@ -4,20 +4,20 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import GraphComponent from "./GraphComponent"; // 예시로 그래프를 그려주는 컴포넌트
 
-const StockBox = ({ title, indexValue }) => {
-  const dataPoints = [20, 40, 25, 35, 50, 30, 45];
+const StockBox = ({ title, indexValue, imgSrc, chart }) => {
+
 
   return (
     <View
       style={{
-        backgroundColor: "#E1E0FF",
+        backgroundColor: "white",
         padding: 8,
         borderRadius: 10,
         width: "45%",
         margin: "3%",
         borderColor: "white",
         borderWidth: 2,
-        flexDirection: "column", // 세로 정렬
+        flexDirection: "column",
       }}
     >
       <View
@@ -25,19 +25,18 @@ const StockBox = ({ title, indexValue }) => {
           flexDirection: "row",
         }}
       >
-        <Text style={{ color: "black", fontWeight: "bold", fontSize: 18 }}>
+        <Text style={{ color: "black", fontWeight: "bold", fontSize: 18, marginBottom: 10 }}>
           {title}
         </Text>
-        {/* 이미지 추가 */}
         <Image
-          source={require("../../assets/image/korea.png")}
+          source={imgSrc}
           style={{ width: 20, height: 20, marginLeft: 5 }}
         />
       </View>
       <Text style={{ color: "black", fontWeight: "bold", fontSize: 12 }}>
         {indexValue}
       </Text>
-      <GraphComponent dataPoints={dataPoints} />
+      <GraphComponent dataPoints={chart} />
     </View>
   );
 };

@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     width: "100%",
+    height: "7%",
     paddingVertical: 10,
   },
   item: {
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   text: {
-    fontSize: 20,
+    fontSize: 18,
     color: "grey", // 기본 글자색
   },
   selectedText: {
