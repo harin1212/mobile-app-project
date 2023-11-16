@@ -11,7 +11,7 @@ const StockItem = ({ imageSource, name, price, change }) => (
       <Text style={styles.stockName}>{name}</Text>
       <View style={styles.priceChangeContainer}>
         <Text style={styles.stockPrice}>{price}</Text>
-        <Text style={styles.stockChange}>{change}</Text>
+        <Text style={[styles.stockChange, { color: change.includes('+') ? 'red' : 'blue' }]}>{change}</Text>
       </View>
     </View>
   </View>
@@ -26,22 +26,22 @@ const Interested = () => {
 
       {/* 주식 목록 */}
       <StockItem
-        imageSource={require("../../assets/image/apple.png")}
-        name="종목1"
-        price="$100"
-        change="+5%"
-      />
-      <StockItem
-        imageSource={require("../../assets/image/tesla.jpg")}
-        name="종목2"
-        price="$150"
-        change="-3%"
-      />
-      <StockItem
         imageSource={require("../../assets/image/samsung.png")}
-        name="종목3"
-        price="$80"
-        change="+2%"
+        name="삼성전자"
+        price="70,400원"
+        change="   -3.10%"
+      />
+      <StockItem
+        imageSource={require("../../assets/image/apple.png")}
+        name="애플"
+        price="244,353원"
+        change="+2.44%"
+      />
+      <StockItem
+        imageSource={require("../../assets/image/tesla.png")}
+        name="테슬라"
+        price="283,222원"
+        change="-4.40%"
       />
     </View>
   );
@@ -49,25 +49,33 @@ const Interested = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    margin: 20,
   },
   title: {
     fontSize: 18,
     fontWeight: "bold",
+    marginTop: 10,
+    marginLeft: 5,
   },
   subtitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "bold",
     color: "black",
+    marginTop: 10,
+    marginLeft: 5,
   },
   analysisText: {
     color: "gray",
     marginVertical: 10,
+    marginLeft: 5,
   },
   stockItem: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 15,
+    marginBottom: 10,
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ccc",
   },
   stockImage: {
     width: 50,
@@ -81,17 +89,19 @@ const styles = StyleSheet.create({
   stockName: {
     fontSize: 16,
     fontWeight: "bold",
+    alignItems: "center",
   },
   priceChangeContainer: {
-    flexDirection: "column",
-    alignItems: "flex-end",
+    flexDirection: "row",
+    alignItems: "center",
   },
   stockPrice: {
-    fontSize: 14,
+    fontSize: 15,
+    marginTop: 5
   },
   stockChange: {
-    fontSize: 14,
-    color: "green", // 또는 'red' 등으로 동적으로 변경 가능
+    fontSize: 13,
+    marginLeft: 150,
   },
 });
 

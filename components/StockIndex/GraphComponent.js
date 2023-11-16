@@ -13,7 +13,7 @@ const GraphComponent = ({ dataPoints }) => {
 
   const graphPath = dataPoints
     .map((value, index) => ({
-      x: (index / (dataPoints.length - 1)) * 100,
+      x: (index / (dataPoints.length)) * 100,
       y: (1 - value / maxValue) * 100,
     }))
     .reduce((acc, point, index) => {
@@ -29,7 +29,7 @@ const GraphComponent = ({ dataPoints }) => {
         <Path
           d={`M0 100 ${graphPath} L100 100`}
           fill="none"
-          stroke="#9370DB"
+          stroke="rgba(5, 3, 0, 0.54)"
           strokeWidth={2}
         />
       </Svg>
@@ -40,7 +40,10 @@ const GraphComponent = ({ dataPoints }) => {
 const styles = StyleSheet.create({
   graphContainer: {
     marginTop: 10,
-    height: "40%",
+    marginLeft: 20,
+    height: 70,
+    width: "100%",
+    alignItems: "center",
   },
 });
 

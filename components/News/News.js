@@ -7,16 +7,15 @@ const News = () => {
     <View style={styles.container}>
       <Text style={styles.topText}>뉴스 키워드</Text>
 
-      <View style={styles.newsWrap}>
+      <View style={styles.newsWrap1}>
         <NewsBox text="#동전주" />
         <NewsBox text="#배당금" />
         <NewsBox text="#CPI" />
-        <NewsBox text="#공매도" />
       </View>
 
-      <View style={styles.newsWrap}>
+      <View style={styles.newsWrap2}>
+        <NewsBox text="#공매도" />
         <NewsBox text="#금리" />
-        <NewsBox text="#신한알파" />
         <NewsBox text="#플개부짱" />
       </View>
     </View>
@@ -27,11 +26,11 @@ const NewsBox = ({ text }) => (
   <Animatable.View
     style={styles.newsBox}
     animation={{
-      from: { translateX: 500 },
-      to: { translateX: -500 },
+      from: { translateX: -100 },
+      to: { translateX: 100 },
     }}
     iterationCount="infinite"
-    duration={5000} // Adjust the duration as needed
+    duration={5000} 
     easing="linear"
   >
     <Text style={styles.newstxt}>{text}</Text>
@@ -40,7 +39,7 @@ const NewsBox = ({ text }) => (
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    margin: 20,
   },
   topText: {
     fontSize: 20,
@@ -49,7 +48,13 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginBottom: 10,
   },
-  newsWrap: {
+  newsWrap1: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+  },
+  newsWrap2: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',

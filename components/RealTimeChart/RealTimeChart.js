@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Image } from "react-native";
+import styles from "./styled.js";
 import stock1 from "../../assets/image/stock1.png";
 import stock2 from "../../assets/image/stock2.png";
 import stock3 from "../../assets/image/stock3.png";
+import stock4 from "../../assets/image/stock4.png";
+import stock5 from "../../assets/image/stock5.png";
+import stock6 from "../../assets/image/stock6.png";
+import stock7 from "../../assets/image/stock7.png";
+import stock8 from "../../assets/image/stock8.png";
 import heart from "../../assets/image/heart.png";
 
 const RealTimeChart = () => {
@@ -11,6 +17,11 @@ const RealTimeChart = () => {
     { rank: 1, name: "신성델타테크", price: "38,050원", change: "    +0.1%", img: stock1 },
     { rank: 2, name: "애플", price: "244,353원", change: "+0.3%", img: stock2 },
     { rank: 3, name: "테슬라", price: "283,222원", change: "-0.4%", img: stock3 },
+    { rank: 4, name: "아마존", price: "186,446원", change: " +0.6%", img: stock4 },
+    { rank: 5, name: "SKC", price: "94,200원", change: "   -0.7%", img: stock5 },
+    { rank: 6, name: "GS건설", price: "15,200원", change: "   +2.4%", img: stock6 },
+    { rank: 7, name: "현대차우", price: "107,000원", change: " -0.8%", img: stock7 },
+    { rank: 8, name: "애니플러스", price: "3,825원", change: "    -5.4%", img: stock8 },
   ];
 
   const handleCategoryPress = (category) => {
@@ -57,70 +68,6 @@ const RealTimeChart = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    margin: 10,
-  },
-  topText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: 10,
-    marginLeft: 5,
-  },
-  chartBar: {
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "row",
-  },
-  chartText: {
-    fontSize: 15,
-    color: "grey",
-    padding: 20,
-  },
-  chartSelectedText: {
-    fontWeight: "bold",
-    color: "black",
-  },
-  stockItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
-  },
-  rank: {
-    fontSize: 16,
-    marginRight: 10,
-  },
-  stockImg: {
-    width: 40,
-    height: 40,
-    marginHorizontal: 10,
-  },
-  heartImg: {
-    width: 20,
-    height: 20,
-  },
-  textContainer: {
-    flex: 1,
-  },
-  stockName: {
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  priceChangeContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  stockPrice: {
-    fontSize: 12,
-    marginRight: 5,
-    marginTop: 5,
-  },
-  stockChange: {
-    fontSize: 10,
-    marginLeft: 70,
-  },
-});
+
 
 export default RealTimeChart;
