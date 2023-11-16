@@ -11,7 +11,14 @@ const StockItem = ({ imageSource, name, price, change }) => (
       <Text style={styles.stockName}>{name}</Text>
       <View style={styles.priceChangeContainer}>
         <Text style={styles.stockPrice}>{price}</Text>
-        <Text style={[styles.stockChange, { color: change.includes('+') ? 'red' : 'blue' }]}>{change}</Text>
+        <Text
+          style={[
+            styles.stockChange,
+            { color: change.includes("+") ? "red" : "blue" },
+          ]}
+        >
+          {change}
+        </Text>
       </View>
     </View>
   </View>
@@ -47,6 +54,7 @@ const Interested = () => {
   );
 };
 
+//스타일 코드
 const styles = StyleSheet.create({
   container: {
     margin: 20,
@@ -97,7 +105,7 @@ const styles = StyleSheet.create({
   },
   stockPrice: {
     fontSize: 15,
-    marginTop: 5
+    marginTop: 5,
   },
   stockChange: {
     fontSize: 13,

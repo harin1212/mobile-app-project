@@ -1,12 +1,10 @@
 // StockBox.js
-
+//지수 보여주는 컴포넌트
 import React from "react";
 import { View, Text, Image } from "react-native";
-import GraphComponent from "./GraphComponent"; // 예시로 그래프를 그려주는 컴포넌트
+import GraphComponent from "./GraphComponent"; //
 
 const StockBox = ({ title, indexValue, imgSrc, chart }) => {
-
-
   return (
     <View
       style={{
@@ -25,7 +23,14 @@ const StockBox = ({ title, indexValue, imgSrc, chart }) => {
           flexDirection: "row",
         }}
       >
-        <Text style={{ color: "black", fontWeight: "bold", fontSize: 18, marginBottom: 10 }}>
+        <Text
+          style={{
+            color: "black",
+            fontWeight: "bold",
+            fontSize: 18,
+            marginBottom: 10,
+          }}
+        >
           {title}
         </Text>
         <Image

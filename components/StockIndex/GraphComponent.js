@@ -1,19 +1,18 @@
-// GraphComponent.js
-
+// 그래프 컴포넌트
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
 const GraphComponent = ({ dataPoints }) => {
   if (!dataPoints || dataPoints.length === 0) {
-    return <Text>No data points</Text>;
+    return <Text>No data points</Text>; //데이터 없는 경우 확인용
   }
 
   const maxValue = Math.max(...dataPoints);
 
   const graphPath = dataPoints
     .map((value, index) => ({
-      x: (index / (dataPoints.length)) * 100,
+      x: (index / dataPoints.length) * 100,
       y: (1 - value / maxValue) * 100,
     }))
     .reduce((acc, point, index) => {
@@ -37,6 +36,7 @@ const GraphComponent = ({ dataPoints }) => {
   );
 };
 
+//스타일 코드
 const styles = StyleSheet.create({
   graphContainer: {
     marginTop: 10,

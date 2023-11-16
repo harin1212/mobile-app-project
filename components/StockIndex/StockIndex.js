@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import StockBox from "./StockBox";
-import korea from "../../assets/image/korea.png"
-import us from "../../assets/image/us.png"
-import china from "../../assets/image/china.png"
+import korea from "../../assets/image/korea.png";
+import us from "../../assets/image/us.png";
+import china from "../../assets/image/china.png";
 
 const ContentSwitcher = () => {
   const [selectedButton, setSelectedButton] = useState("국내");
@@ -57,20 +57,41 @@ const ContentSwitcher = () => {
       <View style={styles.contentContainer}>
         {selectedButton === "국내" ? (
           <View style={styles.stockBoxContainer}>
-            <StockBox title="코스피" indexValue="2,405.91" imgSrc={korea} chart={dataPoints1}/>
-            <StockBox title="코스닥" indexValue="777.47" imgSrc={korea} chart={dataPoints2}/>
+            <StockBox
+              title="코스피"
+              indexValue="2,405.91"
+              imgSrc={korea}
+              chart={dataPoints1}
+            />
+            <StockBox
+              title="코스닥"
+              indexValue="777.47"
+              imgSrc={korea}
+              chart={dataPoints2}
+            />
           </View>
         ) : (
           <View style={styles.stockBoxContainer}>
-          <StockBox title="나스닥" indexValue="15,713.33" imgSrc={us} chart={dataPoints3}/>
-          <StockBox title="상해종합" indexValue="3,560.14" imgSrc={china} chart={dataPoints4}/>
-        </View>
+            <StockBox
+              title="나스닥"
+              indexValue="15,713.33"
+              imgSrc={us}
+              chart={dataPoints3}
+            />
+            <StockBox
+              title="상해종합"
+              indexValue="3,560.14"
+              imgSrc={china}
+              chart={dataPoints4}
+            />
+          </View>
         )}
       </View>
     </View>
   );
 };
 
+//스타일 코드
 const styles = StyleSheet.create({
   container: {
     padding: 10,
