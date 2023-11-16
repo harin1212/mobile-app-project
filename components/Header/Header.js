@@ -9,7 +9,6 @@ const Header = () => {
   });
   const [isKosdaqVisible, setIsKosdaqVisible] = useState(true);
 
-  // 가상의 지수 업데이트 함수 (실제 API 호출 또는 기타 메커니즘으로 대체되어야 함)
   const updateIndices = () => {
     setIndices({
       kosdaq: Math.random() * 1000,
@@ -18,7 +17,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // 일정 간격으로 가상의 지수 업데이트
+    // 일정 간격으로 가상의 코스피, 지수 업데이트
     const intervalId = setInterval(() => {
       updateIndices();
       setIsKosdaqVisible((prev) => !prev);
@@ -28,6 +27,7 @@ const Header = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  //화면 구성
   return (
     <View style={HeaderStyles.container}>
       <Text style={HeaderStyles.title}> H&H 베타</Text>

@@ -8,7 +8,7 @@ const CategoriesContainer = () => {
     setSelectedCategory(category);
   };
 
-  // useEffect를 사용하여 초기에 "주식"이 선택되도록 설정
+  // useEffect를 사용하여 초기에 "주식"이 선택되게 설정하기
   useEffect(() => {
     handleCategoryPress("주식");
   }, []);
@@ -67,6 +67,7 @@ const CategoriesContainer = () => {
   );
 };
 
+//스타일 코드
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
