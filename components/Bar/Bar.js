@@ -62,19 +62,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: 24,
-    height: 24,
+    width: 22,
+    height: 22,
+    marginBottom: 10
   },
   text: {
     fontSize: 10,
-    color: "#8863E4",
+    color: "#74736C",
   },
   selectedImage: {
-    tintColor: 'blue', // Change the color to indicate selection
+    tintColor: '#FFDD79', 
   },
   selectedText: {
-    color: 'blue', // Change the color to indicate selection
+    color: '#74736C',
   },
+  
 });
 
 export default Bar;
