@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Linking } from "react-native"
 import styles from "./styled.js";
 import * as Animatable from "react-native-animatable";
 
+
 const NewsBox = ({ text, link }) => {
   const handlePress = () => {
     Linking.openURL(link);
@@ -27,6 +28,7 @@ const NewsBox = ({ text, link }) => {
   );
 };
 
+// 뉴스 컴포넌트
 const News = () => {
   const newsItems = [
     { text: "#동전주", link: "https://news.google.com/search?q=%EB%8F%99%EC%A0%84%EC%A3%BC&hl=ko&gl=KR&ceid=KR%3Ako" },

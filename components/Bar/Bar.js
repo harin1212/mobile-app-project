@@ -6,6 +6,7 @@ import menu2 from '../../assets/image/menu2.png';
 import menu3 from '../../assets/image/menu3.png';
 import menu4 from '../../assets/image/menu4.png';
 
+// 하단바 컴포넌트
 const Bar = () => {
   const [selectedMenu, setSelectedMenu] = useState("home"); // Initial selection
 
