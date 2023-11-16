@@ -8,6 +8,8 @@ import StockIndex from "./components/StockIndex/StockIndex.js";
 import News from "./components/News/News.js";
 import Interested from "./components/Interested/interested.js";
 import Footer from "./components/Footer/Footer.js";
+
+
 function App() {
   return (
     <View style={styles.container}>
