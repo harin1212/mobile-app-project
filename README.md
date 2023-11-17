@@ -13,13 +13,14 @@
 
 ---
 
-## 주식 앱 메인페이지 레이아웃
+## 🥸 주식 앱 메인페이지 레이아웃
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/48281329-1e71-4961-b98a-e3f1da3e457e" alt="view4" style="width: 30%;">
-    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/d7fb1415-132d-46f3-8ea4-3554bc5cc82a" alt="view3" style="width: 30%;">
+    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/c71f5f12-a4a1-4557-a26b-60d46fbdb49e" alt="view1" style="width: 30%;">
+    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/98fce675-4154-4c84-99e6-0d27f0bb3859" alt="view2" style="width: 30%;">
 </div>
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/e273c88f-a804-4ec3-b54f-4254914da167" alt="view2" style="width: 30%;">
-    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/b3280291-e122-43e0-bb85-2280f83c6562" alt="view1" style="width: 30%;">
+    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/e59c7d21-2614-4858-945f-5001bf08d2aa" alt="view3" style="width: 30%;">
+    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/1288b697-d864-4660-a2db-377711396d51" alt="view4" style="width: 30%;">
+    <img src="https://github.com/Shinhan-H-H/shinhan-mobile-project/assets/99604087/186851dc-1e01-4c5c-be90-f2a881df472d" alt="view5" style="width: 30%;">
 </div>
