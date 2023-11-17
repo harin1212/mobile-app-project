@@ -65,6 +65,28 @@ const styles = StyleSheet.create({
       fontSize: 10,
       marginLeft: 100
     },
+    // 모달
+    modalContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    modalContent: {
+      textAlign: 'bottom',
+      backgroundColor: 'white',
+      padding: 20,
+      marginTop: '50%',
+      borderRadius: 10,
+      width: '90%',
+      height: '60%',
+    },
+    close: {
+      fontSize: 15,
+      textAlign: 'right',
+    },
+    priceText: {
+      padding: 10
+    }
   });
 
   export default styles;
